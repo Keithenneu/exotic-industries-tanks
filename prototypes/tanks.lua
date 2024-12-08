@@ -42,12 +42,11 @@ data:extend({
         energy_required = 2,
         ingredients =
         {
-            {"concrete", 25},
-            {"steel-plate", 40},
-            {"storage-tank", 4},
+            {type="item", name="concrete", amount=25},
+            {type="item", name="steel-plate", amount=40},
+            {type="item", name="storage-tank", amount=4},
         },
-        result = "ei_tank-1",
-        result_count = 1,
+        results = {{type="item", name="ei_tank-1", amount=1}},
         enabled = false,
         always_show_made_in = true,
         main_product = "ei_tank-1",
@@ -59,12 +58,11 @@ data:extend({
         energy_required = 2,
         ingredients =
         {
-            {"concrete", 200},
-            {"steel-plate", 200},
-            {"storage-tank", 10},
+            {type="item", name="concrete", amount=200},
+            {type="item", name="steel-plate", amount=200},
+            {type="item", name="storage-tank", amount=10},
         },
-        result = "ei_tank-2",
-        result_count = 1,
+        results = {{type="item", name="ei_tank-2", amount=1}},
         enabled = false,
         always_show_made_in = true,
         main_product = "ei_tank-2",
@@ -76,12 +74,11 @@ data:extend({
         energy_required = 2,
         ingredients =
         {
-            {"iron-plate", 25},
-            {"steel-plate", 40},
-            {"storage-tank", 2},
+            {type="item", name="iron-plate", amount=25},
+            {type="item", name="steel-plate", amount=40},
+            {type="item", name="storage-tank", amount=2},
         },
-        result = "ei_tank-3",
-        result_count = 1,
+        results = {{type="item", name="ei_tank-3", amount=1}},
         enabled = false,
         always_show_made_in = true,
         main_product = "ei_tank-3",
@@ -170,19 +167,16 @@ data:extend({
         map_color = data.raw["storage-tank"]["storage-tank"].map_color,
         window_bounding_box = {{0,0},{1,1}},
         fluid_box = {
-            base_area = 750,
+            volume = 75000,
             pipe_covers = pipecoverspictures(),
             pipe_picture = ei_tank_1,
-            base_level = 0,
-            height = 1,
             pipe_connections =
             {
-                { type = "input-output", position = {0, -3} },
-                { type = "input-output", position = {0, 3} },
-                { type = "input-output", position = {-3, 0} },
-                { type = "input-output", position = {3, 0} },
+                { direction=defines.direction.north, position = {0, -2} },
+                { direction=defines.direction.south, position = {0, 2} },
+                { direction=defines.direction.west, position = {-2, 0} },
+                { direction=defines.direction.east, position = {2, 0} },
             },
-            production_type = "input-output",
         },
         pictures = {
             picture = {
@@ -238,26 +232,23 @@ data:extend({
         map_color = data.raw["storage-tank"]["storage-tank"].map_color,
         window_bounding_box = {{0,0},{1,1}},
         fluid_box = {
-            base_area = 2000,
+            volume = 200000,
             pipe_covers = pipecoverspictures(),
             pipe_picture = ei_tank_2,
-            base_level = 0,
-            height = 1,
             pipe_connections =
             {
-                { type = "input-output", position = {1, -4} },  
-                { type = "input-output", position = {-1, -4} },
+                { direction=defines.direction.north, position = {1, -3} },  
+                { direction=defines.direction.north, position = {-1, -3} },
 
-                { type = "input-output", position = {1, 4} },
-                { type = "input-output", position = {-1, 4} },
+                { direction=defines.direction.south, position = {1, 3} },
+                { direction=defines.direction.south, position = {-1, 3} },
 
-                { type = "input-output", position = {-4, 1} },
-                { type = "input-output", position = {-4, -1} },
+                { direction=defines.direction.west, position = {-3, 1} },
+                { direction=defines.direction.west, position = {-3, -1} },
 
-                { type = "input-output", position = {4, 1} },
-                { type = "input-output", position = {4, -1} },
+                { direction=defines.direction.east, position = {3, 1} },
+                { direction=defines.direction.east, position = {3, -1} },
             },
-            production_type = "input-output",
         },
         pictures = {
             picture = {
@@ -313,19 +304,16 @@ data:extend({
         map_color = data.raw["storage-tank"]["storage-tank"].map_color,
         window_bounding_box = {{0,0},{1,1}},
         fluid_box = {
-            base_area = 750,
+            volume = 75000,
             pipe_covers = pipecoverspictures(),
             pipe_picture = ei_tank_1,
-            base_level = 0,
-            height = 1,
             pipe_connections =
             {
-                { type = "input-output", position = {0, -3} },
-                { type = "input-output", position = {0, 3} },
-                { type = "input-output", position = {-3, 0} },
-                { type = "input-output", position = {3, 0} },
+                { direction=defines.direction.north, position = {0, -2} },
+                { direction=defines.direction.south, position = {0, 2} },
+                { direction=defines.direction.west, position = {-2, 0} },
+                { direction=defines.direction.east, position = {2, 0} },
             },
-            production_type = "input-output",
         },
         pictures = {
             picture = {
